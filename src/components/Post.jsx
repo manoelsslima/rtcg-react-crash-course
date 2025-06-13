@@ -1,7 +1,7 @@
 import classes from "./Post.module.css";
 
 function Post(props) {
-  // use classes as props
+  // "className" replaces "class" attribute in React 
   return (
     <li className={classes.post}>
       <p className={classes.author}>{props.author}</p>
