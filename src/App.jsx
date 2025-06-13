@@ -1,10 +1,11 @@
-import Post from "./components/Post";
+import PostList from "./components/PostsList";
+
+// const list = [{nome:"manoel", texto:"React.js é legal"}, {nome:"Maximilian", texto:"Confira o novo curso"}];
 
 function App() {
   return (
     <main>
-      <Post author="Manoel" body="React.js is awesome!" />
-      <Post author="Maximilian" body="Check out the full course!" />
+      <PostList />
     </main>
   );
 }
