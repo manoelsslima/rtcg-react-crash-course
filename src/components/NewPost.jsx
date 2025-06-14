@@ -1,7 +1,7 @@
 import classes from './NewPost.module.css';
-import {useState} from "react";
+// import {useState} from "react";
 
-function NewPost() {
+function NewPost(props) {
 
     // const stateData = useState('');
     // stateData has two elements (because useState returns an array)
@@ -9,27 +9,26 @@ function NewPost() {
     // stateData[1] // state updating function
     // when we call update function, React will rerender the component with "current value" updated
 
-    const [enteredBody, setEnteredBody ] = useState('');
+    // const [enteredBody, setEnteredBody ] = useState('');
 
     /* will be passed to onChange event
     equivalent to:
     addEventListener('change'), function(event) {})
     */
-    function changeBodyHandler(event) {
-        setEnteredBody(event.target.value);
-    }
+    // function changeBodyHandler(event) {
+    //     setEnteredBody(event.target.value);
+    // }
 
   // "htmlFor" replaces "for" attribute in React 
   return (
     <form className={classes.form}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} onChange={changeBodyHandler} />
+        <textarea id="body" required rows={3} onChange={props.onBodyChange} />
       </p>
-      <p>{enteredBody}</p>
       <p>
-        <label htmlFor="name">Your name</label>
-        <input type="text" id="name" required />
+        <label htmlFor="name"></label>
+        <input type="text" id="name" required onChange={props.onAuthorChange} />
       </p>
     </form>
   );
