@@ -49,7 +49,7 @@ function NewPost(props) {
         <textarea id="body" required rows={3} onChange={bodyChangeHandler} />
       </p>
       <p>
-        <label htmlFor="name"></label>
+        <label htmlFor="name">Your name</label>
         <input type="text" id="name" required onChange={authorChangeHandler} />
       </p>
         <p className={classes.actions}>
