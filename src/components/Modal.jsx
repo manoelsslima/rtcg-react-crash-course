@@ -5,7 +5,7 @@ import classes from './Modal.module.css';
 // children is used only to render content between opening and enclosing tags of custom components
 function Modal(props) {
     return <>
-        <div className={classes.backdrop}>
+        <div className={classes.backdrop} onClick={props.onClose}>
             <dialog open={true} className={classes.modal}>
                 {props.children}
             </dialog>
