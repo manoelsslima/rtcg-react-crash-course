@@ -21,6 +21,7 @@ function NewPost(props) {
             author: enteredAuthor
         }
         console.log(postData);
+        props.onAddPost(postData);
         props.onCancel(); // executing as a function
     }
 
